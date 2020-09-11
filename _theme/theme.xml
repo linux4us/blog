@@ -10,17 +10,18 @@
       gtag(&#39;config&#39;, &#39;UA-1813817-2&#39;);
     </script>
     <script async='async' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f5af57ff875b3001244a651&amp;product=sop' type='text/javascript'/>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
 	<script async='async' defer='defer' src='https://platform.linkedin.com/badges/js/profile.js' type='text/javascript'/>
     <meta expr:content='data:blog.isMobile         ? &quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0&quot;         : &quot;width=1100&quot;' name='viewport'/>
     <meta content='24E7411151F52A2EE8C78855433F52B7' name='msvalidate.01'/>
     <b:include data='blog' name='all-head-content'/>
     <b:if cond='data:blog.pageType == &quot;archive&quot;'>
     	<meta content='NOINDEX' name='ROBOTS'/>
-		<title><data:blog.title/> | Linux4Us</title>
+		<title><data:blog.title/> | <data:blog.title/></title>
 	<b:elseif cond='data:blog.pageType == &quot;index&quot;'/>
-		<title><data:blog.title/> | Linux4Us</title>
+		<title><data:blog.title/> | <data:blog.title/></title>
 	<b:else/>
-		<title><data:blog.pageName/> | Linux4Us</title>
+		<title><data:blog.pageName/> | <data:blog.title/></title>
     </b:if>
     <b:skin><![CDATA[
 
@@ -422,6 +423,22 @@ h3.post-title, .comments h4 {
   box-shadow: 0 0 0 rgba(0, 0, 0, .1);
 }
 
+header {
+  /*
+  position: fixed;
+  left: 0;
+  width: 100%;
+*/
+  background-color: white;
+  display: block;
+  z-index: 999;
+  margin: 0;
+  padding: 1rem;
+  border-bottom: 1px solid #2288bb;
+  top: 0;
+}
+
+
 .post-header {
   margin: 0 0 1.5em;
 
@@ -622,7 +639,7 @@ body .navbar{
 }
 
 .post-body p {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.2rem;
 }
 
 #header-inner div.title{
@@ -726,6 +743,10 @@ div.PopularPosts h2 {
    margin: 0px
 }
 
+.widget {
+  margin: 20px 0;
+}
+
 .widget ul {
   padding: 0px;
   list-style: none;
@@ -763,7 +784,6 @@ div.PopularPosts h2 {
 .mobile #Label1 h2 {
   font-size: 1.8em !important;
 }
-
 
 #FeaturedPost1 h2 {
   font-size: 1.8em;
@@ -923,11 +943,93 @@ br {
   display: none;
 }
 
+
+.alignleft {
+  float: left;
+  text-align:left;
+  width:50%;
+}
+
+.aligncenter {
+  float: left;
+  text-align:center;
+}
+
+.alignright {
+  float: left;
+  text-align:right;
+  width:50%;
+  margin-top: 1rem;
+}
+
+.header-inner .widget {
+  margin: 0px !important!
+}
+
+#header .widget {
+  margin: 0 !important;
+}
+
+#l4u-header {
+  font-size: 0.8rem;
+}
+
+#l4u-footer {
+  padding: 2rem;
+  background: linear-gradient(to left, #6A737B, #535B61);
+  color: #BEBEBE;
+}
+
+#HTML6 .widget-content{
+  padding: 1rem;
+  margin: 0;
+  background-color: #DDD;
+  color: #333;
+}
+
+.fauxcolumn-right-outer .fauxcolumn-inner {
+  border-left: 0;
+}
+
+.columns-inner {
+  padding: 3rem;
+}
+
+.content-inner {
+  padding: 0;
+}
+
+.mobile .columns-inner {
+  padding: 0;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+footer p {
+  padding: 0;
+  margin: 2px;
+}
+
+footer a {
+  color: #FFF !important;
+}
+
+footer .widget{
+  margin: 0;
+}
+
+#footer-1 {
+  margin: 0px;
+}
+
 ]]></b:skin>
     <b:template-skin>
-      <b:variable default='960px' name='content.width' type='length' value='1000px'/>
+      <b:variable default='960px' name='content.width' type='length' value='1020px'/>
       <b:variable default='0' name='main.column.left.width' type='length' value='0px'/>
-      <b:variable default='310px' name='main.column.right.width' type='length' value='240px'/>
+      <b:variable default='310px' name='main.column.right.width' type='length' value='280px'/>
 
       <![CDATA[
       body {
@@ -1106,80 +1208,34 @@ head.appendChild(script);
     <div class='fauxborder-right header-fauxborder-right'/>
     <div class='region-inner header-inner'>
       <b:section class='header' id='header' maxwidgets='1' name='Header' showaddelement='no'>
-        <b:widget id='Header1' locked='false' title='Linux4Us (Header)' type='Header' version='1'>
+        <b:widget id='HTML5' locked='false' mobile='yes' title='' type='HTML'>
           <b:widget-settings>
-            <b:widget-setting name='displayUrl'>http://4.bp.blogspot.com/-Fa_c3nwOQdc/X1VDbYtjUPI/AAAAAAAAEGc/G_OX7Nii_MU-uXafkDs_xXiMxUtYkWwzwCK4BGAYYCw/s1600/banner.jpg</b:widget-setting>
-            <b:widget-setting name='displayHeight'>220</b:widget-setting>
-            <b:widget-setting name='sectionWidth'>752</b:widget-setting>
-            <b:widget-setting name='useImage'>true</b:widget-setting>
-            <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
-            <b:widget-setting name='imagePlacement'>BEFORE_DESCRIPTION</b:widget-setting>
-            <b:widget-setting name='displayWidth'>1000</b:widget-setting>
+            <b:widget-setting name='content'>&lt;div id=&quot;l4u-header&quot;&gt;
+ &lt;div class=&quot;alignleft&quot;&gt;
+  &lt;strong&gt;&lt;a href=&quot;/&quot;&gt;Linux4us&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;
+News, tutorials and tips for learning and using Linux
+&lt;/div&gt;
+
+ &lt;div class=&quot;alignright&quot;&gt;
+  &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |
+  &lt;a href=&quot;/p/books.html&quot;&gt;Free Books&lt;/a&gt; |
+  &lt;a href=&quot;/p/courses.html&quot;&gt;Free Courses&lt;/a&gt; |
+  &lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; |
+  &lt;a href=&quot;/p/about-us.html&quot;&gt;About Us&lt;/a&gt; |
+  &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt; 
+&lt;/div&gt;
+&lt;/div&gt;</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
-
-  <b:if cond='data:useImage'>
-    <b:if cond='data:imagePlacement == &quot;BEHIND&quot;'>
-      <!--
-      Show image as background to text. You can't really calculate the width
-      reliably in JS because margins are not taken into account by any of
-      clientWidth, offsetWidth or scrollWidth, so we don't force a minimum
-      width if the user is using shrink to fit.
-      This results in a margin-width's worth of pixels being cropped. If the
-      user is not using shrink to fit then we expand the header.
-      -->
-      <b:if cond='data:mobile'>
-        <div id='header-inner'>
-          <div class='titlewrapper' style='background: transparent'>
-            <div class='title' style='background: transparent; border-width: 0px'>
-              <b:include name='title'/>
-            </div>
-          </div>
-          <b:include name='description'/>
-        </div>
-      <b:else/>
-        <div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;                      + &quot;background-position: &quot;                      + data:backgroundPositionStyleStr + &quot;; &quot;                      + data:widthStyleStr                      + &quot;min-height: &quot; + data:height                      + &quot;_height: &quot; + data:height                      + &quot;background-repeat: no-repeat; &quot;' id='header-inner'>
-          <div class='titlewrapper' style='background: transparent'>
-            <div class='title' style='background: transparent; border-width: 0px'>
-              <b:include name='title'/>
-            </div>
-          </div>
-          <b:include name='description'/>
-        </div>
-      </b:if>
-    <b:else/>
-      <!--Show the image only-->
-      <div id='header-inner'>
-        <a expr:href='data:blog.homepageUrl' style='display: block'>
-          <img expr:alt='data:title' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_headerimg&quot;' expr:src='data:sourceUrl' expr:width='data:width' style='display: block'/>
-        </a>
-        <!--Show the description-->
-        <b:if cond='data:imagePlacement == &quot;BEFORE_DESCRIPTION&quot;'>
-          <b:include name='description'/>
-        </b:if>
-      </div>
-    </b:if>
-  <b:else/>
-    <!--No header image -->
-    <div id='header-inner'>
-      <div class='titlewrapper'>
-        <div class='title'>
-          <b:include name='title'/>
-        </div>
-      </div>
-      <b:include name='description'/>
-    </div>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
   </b:if>
-</b:includable>
-          <b:includable id='description'>
-  <div class='descriptionwrapper'>
-    <p class='description'><span><data:description/></span></p>
+  <div class='widget-content'>
+    <data:content/>
   </div>
-</b:includable>
-          <b:includable id='title'>
-  <b:tag cond='data:blog.url != data:blog.homepageUrl' expr:href='data:blog.homepageUrl' name='a'>
-    <data:title/>
-  </b:tag>
+
+  <b:include name='quickedit'/>
 </b:includable>
         </b:widget>
       </b:section>
@@ -1200,40 +1256,7 @@ head.appendChild(script);
     <div class='fauxborder-left tabs-fauxborder-left'>
     <div class='fauxborder-right tabs-fauxborder-right'/>
     <div class='region-inner tabs-inner'>
-      <b:section class='tabs' id='crosscol' maxwidgets='1' name='Cross-Column' showaddelement='yes'>
-        <b:widget id='PageList1' locked='false' title='Pages' type='PageList'>
-          <b:widget-settings>
-            <b:widget-setting name='pageListJson'><![CDATA[{'home': {'href': 'https://www.linux4us.com/', 'title': 'Home', 'position': 0}, '2925715969671151994': {'href': 'https://www.linux4us.com/p/books.html', 'title': 'Free Books', 'position': 1}, '6484755703027962278': {'href': 'https://www.linux4us.com/p/free-courses.html', 'title': 'Free Courses', 'position': 2}, '8888935704544559021': {'href': 'https://www.linux4us.com/p/contribute.html', 'title': 'Contribute', 'position': 3}, '8792185905746672110': {'href': 'https://www.linux4us.com/p/privacy.html', 'title': 'Privacy', 'position': 4}, '4097488792082666287': {'href': 'https://www.linux4us.com/p/about-us.html', 'title': 'About Us', 'position': 5}, '5280517806513560819': {'href': 'https://www.linux4us.com/p/contact.html', 'title': 'Contact', 'position': 6}}]]></b:widget-setting>
-            <b:widget-setting name='homeTitle'>Home</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
-  <div class='widget-content'>
-    <b:if cond='data:mobile'>
-      <select expr:id='data:widget.instanceId + &quot;_select&quot;'>
-        <b:loop values='data:links' var='link'>
-          <option expr:value='data:link.href'>
-            <b:attr cond='data:link.isCurrentPage' name='selected' value='selected'/>
-            <data:link.title/>
-          </option>
-        </b:loop>
-      </select>
-      <span class='pagelist-arrow'>&amp;#9660;</span>
-    <b:else/>
-      <ul>
-        <b:loop values='data:links' var='link'>
-          <li>
-            <b:class cond='data:link.isCurrentPage' name='selected'/>
-            <a expr:href='data:link.href'><data:link.title/></a>
-          </li>
-        </b:loop>
-      </ul>
-    </b:if>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-        </b:widget>
-      </b:section>
+      <b:section class='tabs' id='crosscol' maxwidgets='1' name='Cross-Column' showaddelement='yes'/>
       <b:section class='tabs' id='crosscol-overflow' name='Cross-Column 2' showaddelement='no'>
         <b:widget id='AdSense1' locked='false' title='' type='AdSense'>
           <b:widget-settings>
@@ -2202,6 +2225,22 @@ head.appendChild(script);
   </div>
 </b:includable>
             </b:widget>
+            <b:widget id='HTML4' locked='false' mobile='yes' title='' type='HTML'>
+              <b:widget-settings>
+                <b:widget-setting name='content'><![CDATA[<div class="sharethis-inline-share-buttons"></div>]]></b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+            </b:widget>
             <b:widget id='HTML3' locked='false' mobile='yes' title='' type='HTML'>
               <b:widget-settings>
                 <b:widget-setting name='content'>&lt;div class=&quot;subheader&quot;&gt;Any comment or suggestion about this page? Please &lt;a href=&quot;https://twitter.com/BrunoHilden&quot;&gt;contact us on Twitter&lt;/a&gt;
@@ -2219,20 +2258,60 @@ head.appendChild(script);
   <b:include name='quickedit'/>
 </b:includable>
             </b:widget>
-            <b:widget id='HTML4' locked='false' mobile='yes' title='' type='HTML'>
+            <b:widget id='AdSense2' locked='false' title='' type='AdSense'>
               <b:widget-settings>
-                <b:widget-setting name='content'><![CDATA[<div class="sharethis-inline-share-buttons"></div>]]></b:widget-setting>
+                <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+                <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
+                <b:widget-setting name='style.layout'>970x90</b:widget-setting>
+                <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+                <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
+                <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
+                <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
               </b:widget-settings>
               <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
+  <div class='widget-content'>
+    <data:adCode/>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+            </b:widget>
+            <b:widget id='FeaturedPost1' locked='false' mobile='yes' title='Featured Article' type='FeaturedPost'>
+              <b:widget-settings>
+                <b:widget-setting name='showSnippet'>true</b:widget-setting>
+                <b:widget-setting name='showPostTitle'>true</b:widget-setting>
+                <b:widget-setting name='postId'>8021895329589542975</b:widget-setting>
+                <b:widget-setting name='showFirstImage'>true</b:widget-setting>
+                <b:widget-setting name='useMostRecentPost'>true</b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main'>
+  <!-- Only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
     <h2 class='title'><data:title/></h2>
   </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
+  <b:include name='content'/>
 
   <b:include name='quickedit'/>
+</b:includable>
+              <b:includable id='content'>
+  <div class='post-summary'>
+    <b:if cond='data:showPostTitle and data:postTitle != &quot;&quot;'>
+      <h3><a expr:href='data:postUrl'><data:postTitle/></a></h3>
+    </b:if>
+    <b:if cond='data:showSnippet and data:postSummary != &quot;&quot;'>
+      <p>
+        <data:postSummary/>
+      </p>
+    </b:if>
+    <b:if cond='data:showFirstImage and data:postFirstImage != &quot;&quot;'>
+      <img class='image' expr:src='data:postFirstImage'/>
+    </b:if>
+  </div>
+
+  <style type='text/css'>
+    .image {
+      width: 100%;
+    }
+  </style>
 </b:includable>
             </b:widget>
           </b:section>
@@ -2454,6 +2533,54 @@ head.appendChild(script);
   </div>
 </b:includable>
   </b:widget>
+  <b:widget id='PopularPosts1' locked='false' title='Popular this Week' type='PopularPosts'>
+    <b:widget-settings>
+      <b:widget-setting name='numItemsToShow'>10</b:widget-setting>
+      <b:widget-setting name='showThumbnails'>true</b:widget-setting>
+      <b:widget-setting name='showSnippets'>true</b:widget-setting>
+      <b:widget-setting name='timeRange'>LAST_WEEK</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
+  <div class='widget-content popular-posts'>
+    <ul>
+      <b:loop values='data:posts' var='post'>
+      <li>
+        <b:if cond='!data:showThumbnails'>
+          <b:if cond='!data:showSnippets'>
+            <!-- (1) No snippet/thumbnail -->
+            <a expr:href='data:post.href'><data:post.title/></a>
+          <b:else/>
+            <!-- (2) Show only snippets -->
+            <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+            <div class='item-snippet'><data:post.snippet/></div>
+          </b:if>
+        <b:else/>
+          <!-- (3) Show only thumbnails or (4) Snippets and thumbnails. -->
+          <div expr:class='data:showSnippets ? &quot;item-content&quot; : &quot;item-thumbnail-only&quot;'>
+            <b:if cond='data:post.featuredImage.isResizable or data:post.thumbnail'>
+              <div class='item-thumbnail'>
+                <a expr:href='data:post.href' target='_blank'>
+                  <b:with value='data:post.featuredImage.isResizable                                  ? resizeImage(data:post.featuredImage, 72, &quot;1:1&quot;)                                  : data:post.thumbnail' var='image'>
+                    <img alt='' border='0' expr:src='data:image'/>
+                  </b:with>
+                </a>
+              </div>
+            </b:if>
+            <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+            <b:if cond='data:showSnippets'>
+              <div class='item-snippet'><data:post.snippet/></div>
+            </b:if>
+          </div>
+          <div style='clear: both;'/>
+        </b:if>
+      </li>
+      </b:loop>
+    </ul>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+  </b:widget>
   <b:widget id='AdSense3' locked='false' title='' type='AdSense'>
     <b:widget-settings>
       <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
@@ -2488,97 +2615,85 @@ head.appendChild(script);
   <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
-</b:section-contents><b:section-contents id='footer-1'>
-  <b:widget id='AdSense2' locked='false' title='' type='AdSense'>
-    <b:widget-settings>
-      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-      <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
-      <b:widget-setting name='style.layout'>970x90</b:widget-setting>
-      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-      <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
-      <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
-      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-    </b:widget-settings>
+  <b:widget id='BlogSearch2' locked='false' title='Search' type='BlogSearch'>
     <b:includable id='main'>
-  <div class='widget-content'>
-    <data:adCode/>
+    <!-- only display title if it's non-empty -->
+    <b:if cond='data:title != &quot;&quot;'>
+      <h2 class='title'><data:title/></h2>
+    </b:if>
+
+    <div class='widget-content'>
+      <div expr:id='data:widget.instanceId + &quot;_form&quot;'>
+        <form class='gsc-search-box' expr:action='data:blog.searchUrl'>
+          <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
+          <table cellpadding='0' cellspacing='0' class='gsc-search-box'>
+            <tbody>
+              <tr>
+                <td class='gsc-input'>
+                  <input autocomplete='off' class='gsc-input' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q' size='10' title='search' type='text'/>
+                </td>
+                <td class='gsc-search-button'>
+                  <input class='gsc-search-button' expr:value='data:messages.search' title='search' type='submit'/>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+
     <b:include name='quickedit'/>
-  </div>
-</b:includable>
+  </b:includable>
   </b:widget>
-  <b:widget id='FeaturedPost1' locked='false' mobile='yes' title='Featured this Week' type='FeaturedPost'>
+</b:section-contents><b:section-contents id='footer-1'>
+  <b:widget id='HTML6' locked='false' title='' type='HTML'>
     <b:widget-settings>
-      <b:widget-setting name='showSnippet'>true</b:widget-setting>
-      <b:widget-setting name='showPostTitle'>true</b:widget-setting>
-      <b:widget-setting name='postId'>8021895329589542975</b:widget-setting>
-      <b:widget-setting name='showFirstImage'>true</b:widget-setting>
-      <b:widget-setting name='useMostRecentPost'>true</b:widget-setting>
+      <b:widget-setting name='content'>Is this website helpful to you? Please give us a like, or share your feedback to help us improve. Connect with us on Facebook and Twitter for the latest updates.</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
-  <!-- Only display title if it's non-empty -->
+  <!-- only display title if it's non-empty -->
   <b:if cond='data:title != &quot;&quot;'>
     <h2 class='title'><data:title/></h2>
   </b:if>
-  <b:include name='content'/>
-
-  <b:include name='quickedit'/>
-</b:includable>
-    <b:includable id='content'>
-  <div class='post-summary'>
-    <b:if cond='data:showPostTitle and data:postTitle != &quot;&quot;'>
-      <h3><a expr:href='data:postUrl'><data:postTitle/></a></h3>
-    </b:if>
-    <b:if cond='data:showSnippet and data:postSummary != &quot;&quot;'>
-      <p>
-        <data:postSummary/>
-      </p>
-    </b:if>
-    <b:if cond='data:showFirstImage and data:postFirstImage != &quot;&quot;'>
-      <img class='image' expr:src='data:postFirstImage'/>
-    </b:if>
+  <div class='widget-content'>
+    <data:content/>
   </div>
 
-  <style type='text/css'>
-    .image {
-      width: 100%;
-    }
-  </style>
+  <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
   <b:widget id='HTML1' locked='false' mobile='yes' title='' type='HTML'>
     <b:widget-settings>
-      <b:widget-setting name='content'>&lt;div id=&quot;textbox&quot;&gt;
- &lt;p class=&quot;alignleft&quot;&gt;Copyright &#169; Linux4us&lt;/p&gt;
- &lt;p class=&quot;alignright&quot;&gt;
-&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; | &lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt; | &lt;a href=&quot;/p/about-us.html&quot;&gt;About Us&lt;/a&gt; | &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt;
-
+      <b:widget-setting name='content'>&lt;div id=&quot;l4u-footer&quot;&gt;
+ &lt;p&gt;
+&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |
+&lt;a href=&quot;/p/books.html&quot;&gt;Free Books&lt;/a&gt; |
+&lt;a href=&quot;/p/courses.html&quot;&gt;Free Courses&lt;/a&gt; |
+&lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; |
+&lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt; |
+&lt;a href=&quot;/p/about-us.html&quot;&gt;About Us&lt;/a&gt; |
+&lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt;
  &lt;/p&gt;
- &lt;/div&gt;
 
-&lt;style type=&#39;text/css&#39;&gt;
-#textbox {
-  padding: 10px 20px;
-  font-size: .8em;
-  color: #AAA;
-  border-top: 1px solid #dddddd;
-  margin: 20px 0;
-}
+&lt;p&gt;
+Linux4Us | News, tutorials and tips for learning and using Linux
+&lt;/p&gt;
 
-.alignleft {
-    float: left;
-    text-align:left;
-    width:50%;
-}
-.aligncenter {
-    float: left;
-    text-align:center;
-}
-.alignright {
-    float: left;
-    text-align:right;
-    width:50%;
-}
-  &lt;/style&gt;</b:widget-setting>
+ &lt;p&gt;2020 &#169; &lt;a href=&quot;//www.hildenco.com&quot; target=&quot;_blank&quot;&gt;HildenCo Software&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;
+    &lt;a href=&quot;https://twitter.com/linux4us&quot;target=&quot;_blank&quot;&gt;
+        &lt;i class=&quot;fa fa-twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;https://github.com/linux4us&quot;target=&quot;_blank&quot;&gt;
+        &lt;i class=&quot;fa fa-github&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+
+&lt;/p&gt;
+
+
+
+&lt;/div&gt;</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
