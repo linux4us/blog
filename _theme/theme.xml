@@ -626,26 +626,30 @@ h3,h4,h5{
 }
 
 h3 {
-   font-size: 20px;
+  font-size: 20px;
 }
 
 
 h4 {
-   font-size: 17px;
+  font-size: 17px;
 }
 
 body .navbar{
-   height:0px;
+  height:0px;
 }
 
 .post-body p {
-    margin-bottom: 2.2rem;
+  margin-bottom: 2.2rem;
+}
+
+.post-body ul {
+  list-style: unset !important;
 }
 
 #header-inner div.title{
-    font: normal normal 1.7em Open Sans;
-    color: #06496b;
-    text-shadow: 0 0 0 rgba(0, 0, 0, .2);
+  font: normal normal 1.7em Open Sans;
+  color: #06496b;
+  text-shadow: 0 0 0 rgba(0, 0, 0, .2);
 }
 
 .Header .description{
@@ -759,6 +763,40 @@ div.PopularPosts h2 {
 
 .item-snippet {
    font-size: 12px;
+}
+
+
+#l4u-header .alignleft a {
+  font-size: 1.4rem;
+}
+
+.mobile header {
+  background-color: #06496b;
+  display: block;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  border-bottom: 0;
+}
+
+.mobile #l4u-header .alignleft a {
+    color: white;
+}
+
+.mobile header .alignright {
+  float: inherit;
+  width: 100%;
+  text-align: inherit;
+  color: white;
+  background-color: #dedede;
+  padding: .4rem;
+}
+
+.mobile header .alignleft {
+  float: initial;
+  width: 100%;
+  color: white;
+  padding: .5rem 0 0 .3rem;
 }
 
 .mobile div#FeaturedPost1 {
@@ -943,7 +981,6 @@ br {
   display: none;
 }
 
-
 .alignleft {
   float: left;
   text-align:left;
@@ -975,9 +1012,13 @@ br {
 }
 
 #l4u-footer {
-  padding: 2rem;
+  padding: 1.5rem 0 2rem 0;
   background: linear-gradient(to left, #6A737B, #535B61);
   color: #BEBEBE;
+}
+
+.mobile #l4u-footer{
+  padding-bottom: 2.3rem;
 }
 
 #HTML6 .widget-content{
@@ -1023,6 +1064,34 @@ footer .widget{
 
 #footer-1 {
   margin: 0px;
+}
+
+.my2 {
+  margin: 2rem 0;
+}
+
+.sidebar h2 {
+    font-size: 1rem !important;
+}
+
+.sidebar .PopularPosts {
+    height: auto !important;
+}
+
+.Label {
+    text-align: left;
+}
+.Label a {
+    color: #2288bb !important;
+}
+
+#my-form-button {
+    background-color: white;
+    padding: .3rem 5rem;
+    border: 1px solid #2288bb;
+    color: #2288bb;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 ]]></b:skin>
@@ -2243,7 +2312,7 @@ News, tutorials and tips for learning and using Linux
             </b:widget>
             <b:widget id='HTML3' locked='false' mobile='yes' title='' type='HTML'>
               <b:widget-settings>
-                <b:widget-setting name='content'>&lt;div class=&quot;subheader&quot;&gt;Any comment or suggestion about this page? Please &lt;a href=&quot;https://twitter.com/BrunoHilden&quot;&gt;contact us on Twitter&lt;/a&gt;
+                <b:widget-setting name='content'>&lt;div class=&quot;subheader my2&quot;&gt;Any comment about this page? Please &lt;a href=&quot;https://twitter.com/linux4us1&quot; target=&quot;_blank&quot;&gt;contact us on Twitter&lt;/a&gt;
 &lt;/div&gt;</b:widget-setting>
               </b:widget-settings>
               <b:includable id='main'>
@@ -2646,9 +2715,9 @@ News, tutorials and tips for learning and using Linux
   </b:includable>
   </b:widget>
 </b:section-contents><b:section-contents id='footer-1'>
-  <b:widget id='HTML6' locked='false' title='' type='HTML'>
+  <b:widget id='HTML6' locked='false' mobile='yes' title='' type='HTML'>
     <b:widget-settings>
-      <b:widget-setting name='content'>Is this website helpful to you? Please give us a like, or share your feedback to help us improve. Connect with us on Facebook and Twitter for the latest updates.</b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[Is this website helpful to you? Please consider disabling your ad blocker, sharing posts and <a href="https://twitter.com/linux4us1" target="_blank">sending your feedback</a>. Thanks!]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2667,8 +2736,8 @@ News, tutorials and tips for learning and using Linux
       <b:widget-setting name='content'>&lt;div id=&quot;l4u-footer&quot;&gt;
  &lt;p&gt;
 &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |
-&lt;a href=&quot;/p/books.html&quot;&gt;Free Books&lt;/a&gt; |
-&lt;a href=&quot;/p/courses.html&quot;&gt;Free Courses&lt;/a&gt; |
+&lt;a href=&quot;/p/books.html&quot;&gt;Books&lt;/a&gt; |
+&lt;a href=&quot;/p/courses.html&quot;&gt;Courses&lt;/a&gt; |
 &lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; |
 &lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt; |
 &lt;a href=&quot;/p/about-us.html&quot;&gt;About Us&lt;/a&gt; |
@@ -2676,21 +2745,10 @@ News, tutorials and tips for learning and using Linux
  &lt;/p&gt;
 
 &lt;p&gt;
-Linux4Us | News, tutorials and tips for learning and using Linux
+Linux4Us | News, tutorials and tips about Linux
 &lt;/p&gt;
 
  &lt;p&gt;2020 &#169; &lt;a href=&quot;//www.hildenco.com&quot; target=&quot;_blank&quot;&gt;HildenCo Software&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;
-    &lt;a href=&quot;https://twitter.com/linux4us&quot;target=&quot;_blank&quot;&gt;
-        &lt;i class=&quot;fa fa-twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-    &lt;/a&gt;
-    &lt;a href=&quot;https://github.com/linux4us&quot;target=&quot;_blank&quot;&gt;
-        &lt;i class=&quot;fa fa-github&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
-    &lt;/a&gt;
-
-&lt;/p&gt;
-
 
 
 &lt;/div&gt;</b:widget-setting>
