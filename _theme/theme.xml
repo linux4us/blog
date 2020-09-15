@@ -433,9 +433,21 @@ header {
   display: block;
   z-index: 999;
   margin: 0;
-  padding: 1rem;
-  border-bottom: 1px solid #2288bb;
+  padding: 2rem;
+  border-bottom: 1px solid #ccc;
+  margin-top: 2rem;
   top: 0;
+}
+
+.header-separator {
+  background-color: #ededed;
+  background-image: repeating-linear-gradient(-45deg, #e5e5e5, #e5e5e5 1px, transparent 2px, transparent 7px);
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.mobile .header-separator {
+  display: none;
 }
 
 
@@ -767,7 +779,7 @@ div.PopularPosts h2 {
 
 
 #l4u-header .alignleft a {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .mobile header {
@@ -1316,6 +1328,8 @@ News, tutorials and tips for learning and using Linux
     </div>
     </div>
     </header>
+    
+    <div class='header-separator'/>
 
     <div class='tabs-outer'>
     <div class='tabs-cap-top cap-top'>
