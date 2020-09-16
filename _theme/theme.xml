@@ -658,6 +658,10 @@ body .navbar{
   font-size:1.4em;
 }
 
+.date-header span {
+  background-color: orange;
+}
+
 #main { 
    padding: 0 !important;
    margin: 0 !important;
@@ -786,7 +790,7 @@ div.PopularPosts h2 {
 }
 
 #l4u-header .logo {
-  background-color: #ededed;
+  background-color: orange;
   color: #1E273D;
   display: inline-block;
   padding: 0 .8em 0 1em;
@@ -1330,7 +1334,6 @@ News, tutorials and tips about Linux
   &lt;a href=&quot;/p/books.html&quot;&gt;Books&lt;/a&gt; |
   &lt;a href=&quot;/p/courses.html&quot;&gt;Courses&lt;/a&gt; |
   &lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; |
-  &lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt; |
   &lt;a href=&quot;/p/about-us.html&quot;&gt;About Us&lt;/a&gt; |
   &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt;
 &lt;/div&gt;
@@ -2810,7 +2813,9 @@ News, tutorials and tips about Linux
   &lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; |
   &lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt; |
   &lt;a href=&quot;/p/about-us.html&quot;&gt;About Us&lt;/a&gt; |
-  &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt;
+  &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt; |
+  &lt;a href=&quot;/p/subscribe.html&quot;&gt;Subscribe&lt;/a&gt; |
+  &lt;a href=&quot;//github.com/linux4us&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;
  &lt;/p&gt;
 
 &lt;p&gt;
