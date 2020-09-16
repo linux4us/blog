@@ -424,26 +424,18 @@ h3.post-title, .comments h4 {
 }
 
 header {
-  /*
-  position: fixed;
-  left: 0;
-  width: 100%;
-*/
-  background-color: white;
-  display: block;
-  z-index: 999;
+  background-color: #2a2f4a;
   margin: 0;
-  padding: 2rem;
+  padding: 2rem 1rem 1rem 0;
   border-bottom: 1px solid #ccc;
-  margin-top: 2rem;
+  margin-top: 1rem;
   top: 0;
+  border-bottom: 5px solid orange;
 }
 
 .header-separator {
   background-color: #ededed;
-  background-image: repeating-linear-gradient(-45deg, #e5e5e5, #e5e5e5 1px, transparent 2px, transparent 7px);
   padding: 1rem;
-  border-top: 1px solid #ddd;
 }
 
 .mobile .header-separator {
@@ -616,9 +608,6 @@ body.mobile  {
 
 body {
     background-color: #ededed;
-    background-image: repeating-linear-gradient(-45deg, #e5e5e5, #e5e5e5 1px, transparent 2px, transparent 7px);
-    background-image: -moz-repeating-linear-gradient(-45deg, #e5e5e5, #e5e5e5 1px, transparent 2px, transparent 7px);
-    background-size: 10px 10px;
 }
 
 h1 {
@@ -777,13 +766,42 @@ div.PopularPosts h2 {
    font-size: 12px;
 }
 
-
 #l4u-header .alignleft a {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+#l4u-header .alignright {
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+
+#l4u-header .alignright a{
+  color: #e3e3e3;
+  padding-left: .5rem;
+}
+
+.mobile #l4u-header .alignright a {
+  color: #1E273D;
+  padding-left: .1em;
+}
+
+#l4u-header .logo {
+  background-color: #ededed;
+  color: #1E273D;
+  display: inline-block;
+  padding: 0 .8em 0 1em;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+#l4u-header .desc {
+  color: white;
+  letter-spacing: 0.05em;
+  padding: 0.2em 1.7em;
 }
 
 .mobile header {
-  background-color: #06496b;
+  background-color: #2a2f4a;
   display: block;
   z-index: 999;
   margin: 0;
@@ -791,8 +809,12 @@ div.PopularPosts h2 {
   border-bottom: 0;
 }
 
+.mobile #l4u-header .alignright {
+  margin-top: 1em;
+}
+
 .mobile #l4u-header .alignleft a {
-    color: white;
+  font-size: 1rem;
 }
 
 .mobile header .alignright {
@@ -800,8 +822,8 @@ div.PopularPosts h2 {
   width: 100%;
   text-align: inherit;
   color: white;
-  background-color: #dedede;
-  padding: .4rem;
+  background-color: #ededed;
+  padding: .4rem 0;
 }
 
 .mobile header .alignleft {
@@ -809,6 +831,10 @@ div.PopularPosts h2 {
   width: 100%;
   color: white;
   padding: .5rem 0 0 .3rem;
+}
+
+.mobile #l4u-header .desc {
+  display:none;
 }
 
 .mobile div#FeaturedPost1 {
@@ -828,7 +854,7 @@ div.PopularPosts h2 {
 }
 
 .mobile #Label1 {
-  padding: 10px;
+  padding: 0 0 2rem 1rem;
 }
 
 .mobile #Label1 h2 {
@@ -1025,7 +1051,7 @@ br {
 
 #l4u-footer {
   padding: 1.5rem 0 2rem 0;
-  background: linear-gradient(to left, #6A737B, #535B61);
+  background: linear-gradient(to left, #8d82c4, #2a2f4a);
   color: #BEBEBE;
 }
 
@@ -1293,17 +1319,20 @@ head.appendChild(script);
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;div id=&quot;l4u-header&quot;&gt;
  &lt;div class=&quot;alignleft&quot;&gt;
-  &lt;strong&gt;&lt;a href=&quot;/&quot;&gt;Linux4us&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;
-News, tutorials and tips for learning and using Linux
+  &lt;a href=&quot;/&quot; class=&quot;logo&quot;&gt;Linux4Us&lt;/a&gt;
+  &lt;div class=&quot;desc&quot;&gt;
+News, tutorials and tips about Linux
+&lt;/div&gt;
 &lt;/div&gt;
 
  &lt;div class=&quot;alignright&quot;&gt;
   &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |
-  &lt;a href=&quot;/p/books.html&quot;&gt;Free Books&lt;/a&gt; |
-  &lt;a href=&quot;/p/courses.html&quot;&gt;Free Courses&lt;/a&gt; |
+  &lt;a href=&quot;/p/books.html&quot;&gt;Books&lt;/a&gt; |
+  &lt;a href=&quot;/p/courses.html&quot;&gt;Courses&lt;/a&gt; |
   &lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; |
+  &lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt; |
   &lt;a href=&quot;/p/about-us.html&quot;&gt;About Us&lt;/a&gt; |
-  &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt; 
+  &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt;
 &lt;/div&gt;
 &lt;/div&gt;</b:widget-setting>
           </b:widget-settings>
@@ -2326,7 +2355,7 @@ News, tutorials and tips for learning and using Linux
             </b:widget>
             <b:widget id='HTML3' locked='false' mobile='yes' title='' type='HTML'>
               <b:widget-settings>
-                <b:widget-setting name='content'>&lt;div class=&quot;subheader my2&quot;&gt;Any comment about this page? Please &lt;a href=&quot;https://twitter.com/linux4us1&quot; target=&quot;_blank&quot;&gt;contact us on Twitter&lt;/a&gt;
+                <b:widget-setting name='content'>&lt;div class=&quot;subheader my2&quot;&gt;Any comment about this page? Please &lt;a href=&quot;https://twitter.com/linux4us1&quot; target=&quot;_blank&quot;&gt;reach out on Twitter&lt;/a&gt;
 &lt;/div&gt;</b:widget-setting>
               </b:widget-settings>
               <b:includable id='main'>
@@ -2684,7 +2713,7 @@ News, tutorials and tips for learning and using Linux
   <b:widget id='HTML2' locked='false' title='' type='HTML'>
     <b:widget-settings>
       <b:widget-setting name='content'>&lt;h4&gt;Recent Tweets&lt;/h4&gt;
-&lt;a class=&quot;twitter-timeline&quot; data-width=&quot;500&quot; data-height=&quot;300&quot; data-tweet-limit=&quot;3&quot; data-chrome=&quot;noheader nofooter noborders&quot; href=&quot;https://twitter.com/linux4us1?ref_src=twsrc%5Etfw&quot;&gt;Linux4us&lt;/a&gt; &lt;script async=&quot;async&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot; &gt;&lt;/script&gt;</b:widget-setting>
+&lt;a class=&quot;twitter-timeline&quot; data-width=&quot;500&quot; data-height=&quot;300&quot; data-tweet-limit=&quot;3&quot; data-chrome=&quot;noheader nofooter noborders&quot; href=&quot;https://twitter.com/linux4us1?ref_src=twsrc%5Etfw&quot;&gt;&lt;/a&gt; &lt;script async=&quot;async&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot; &gt;&lt;/script&gt;</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2728,6 +2757,32 @@ News, tutorials and tips for learning and using Linux
     <b:include name='quickedit'/>
   </b:includable>
   </b:widget>
+  <b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail'>
+    <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'><h2 class='title'><data:title/></h2></b:if>
+  <div class='widget-content'>
+    <div class='follow-by-email-inner'>
+      <form action='https://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;https://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
+        <table width='100%'>
+          <tr>
+            <td>
+              <input class='follow-by-email-address' name='email' placeholder='Email address...' type='text'/>
+            </td>
+            <td width='64px'>
+              <input class='follow-by-email-submit' type='submit' value='Submit'/>
+            </td>
+          </tr>
+        </table>
+        <input expr:value='data:feedPath' name='uri' type='hidden'/>
+        <input name='loc' type='hidden' value='en_US'/>
+      </form>
+    </div>
+  </div>
+  <span class='item-control blog-admin'>
+    <b:include name='quickedit'/>
+  </span>
+</b:includable>
+  </b:widget>
 </b:section-contents><b:section-contents id='footer-1'>
   <b:widget id='HTML6' locked='false' mobile='yes' title='' type='HTML'>
     <b:widget-settings>
@@ -2749,13 +2804,13 @@ News, tutorials and tips for learning and using Linux
     <b:widget-settings>
       <b:widget-setting name='content'>&lt;div id=&quot;l4u-footer&quot;&gt;
  &lt;p&gt;
-&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |
-&lt;a href=&quot;/p/books.html&quot;&gt;Books&lt;/a&gt; |
-&lt;a href=&quot;/p/courses.html&quot;&gt;Courses&lt;/a&gt; |
-&lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; |
-&lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt; |
-&lt;a href=&quot;/p/about-us.html&quot;&gt;About Us&lt;/a&gt; |
-&lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt;
+  &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |
+  &lt;a href=&quot;/p/books.html&quot;&gt;Books&lt;/a&gt; |
+  &lt;a href=&quot;/p/courses.html&quot;&gt;Courses&lt;/a&gt; |
+  &lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; |
+  &lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt; |
+  &lt;a href=&quot;/p/about-us.html&quot;&gt;About Us&lt;/a&gt; |
+  &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt;
  &lt;/p&gt;
 
 &lt;p&gt;
