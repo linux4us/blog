@@ -10,7 +10,6 @@
       gtag(&#39;config&#39;, &#39;UA-1813817-2&#39;);
     </script>
     <script async='async' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f5af57ff875b3001244a651&amp;product=sop' type='text/javascript'/>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
 	<script async='async' defer='defer' src='https://platform.linkedin.com/badges/js/profile.js' type='text/javascript'/>
     <meta expr:content='data:blog.isMobile         ? &quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0&quot;         : &quot;width=1100&quot;' name='viewport'/>
     <meta content='24E7411151F52A2EE8C78855433F52B7' name='msvalidate.01'/>
@@ -424,7 +423,7 @@ h3.post-title, .comments h4 {
 }
 
 header {
-  background-color: #2a2f4a;
+  background-color: #06496b;
   margin: 0;
   padding: 2rem 1rem 1rem 0;
   border-bottom: 1px solid #ccc;
@@ -771,7 +770,8 @@ div.PopularPosts h2 {
 }
 
 #l4u-header .alignleft a {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  color:white;
 }
 
 #l4u-header .alignright {
@@ -791,7 +791,7 @@ div.PopularPosts h2 {
 
 #l4u-header .logo {
   background-color: orange;
-  color: #1E273D;
+  color: #white;
   display: inline-block;
   padding: 0 .8em 0 1em;
   letter-spacing: 0.35em;
@@ -805,7 +805,6 @@ div.PopularPosts h2 {
 }
 
 .mobile header {
-  background-color: #2a2f4a;
   display: block;
   z-index: 999;
   margin: 0;
@@ -1055,7 +1054,7 @@ br {
 
 #l4u-footer {
   padding: 1.5rem 0 2rem 0;
-  background: linear-gradient(to left, #8d82c4, #2a2f4a);
+  background: linear-gradient(to right, #06496b, #044760);
   color: #BEBEBE;
 }
 
@@ -1113,7 +1112,7 @@ footer .widget{
 }
 
 .sidebar h2 {
-    font-size: 1rem !important;
+    font-size: 1.2rem !important;
 }
 
 .sidebar .PopularPosts {
@@ -1330,11 +1329,11 @@ News, tutorials and tips about Linux
 &lt;/div&gt;
 
  &lt;div class=&quot;alignright&quot;&gt;
-  &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |
-  &lt;a href=&quot;/p/books.html&quot;&gt;Books&lt;/a&gt; |
-  &lt;a href=&quot;/p/courses.html&quot;&gt;Courses&lt;/a&gt; |
-  &lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; |
-  &lt;a href=&quot;/p/about-us.html&quot;&gt;About Us&lt;/a&gt; |
+  &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; 
+  &lt;a href=&quot;/p/books.html&quot;&gt;Books&lt;/a&gt; 
+  &lt;a href=&quot;/p/courses.html&quot;&gt;Courses&lt;/a&gt; 
+  &lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; 
+  &lt;a href=&quot;/p/about-us.html&quot;&gt;About Us&lt;/a&gt; 
   &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt;
 &lt;/div&gt;
 &lt;/div&gt;</b:widget-setting>
@@ -2342,7 +2341,8 @@ News, tutorials and tips about Linux
             </b:widget>
             <b:widget id='HTML4' locked='false' mobile='yes' title='' type='HTML'>
               <b:widget-settings>
-                <b:widget-setting name='content'><![CDATA[<div class="sharethis-inline-share-buttons"></div>]]></b:widget-setting>
+                <b:widget-setting name='content'>&lt;h3&gt;Share&lt;/h3&gt;
+&lt;div class=&quot;sharethis-inline-share-buttons&quot;&gt;&lt;/div&gt;</b:widget-setting>
               </b:widget-settings>
               <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2602,6 +2602,23 @@ News, tutorials and tips about Linux
     <b:include name='quickedit'/>
   </b:includable>
   </b:widget>
+  <b:widget id='HTML7' locked='false' title='' type='HTML'>
+    <b:widget-settings>
+      <b:widget-setting name='content'>&lt;h2&gt;Follow us&lt;/h2&gt;
+&lt;div class=&quot;sharethis-inline-follow-buttons&quot;&gt;&lt;/div&gt;</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
   <b:widget id='Label1' locked='false' mobile='yes' title='Search by Topic' type='Label'>
     <b:widget-settings>
       <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
@@ -2814,7 +2831,6 @@ News, tutorials and tips about Linux
   &lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt; |
   &lt;a href=&quot;/p/about-us.html&quot;&gt;About Us&lt;/a&gt; |
   &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt; |
-  &lt;a href=&quot;/p/subscribe.html&quot;&gt;Subscribe&lt;/a&gt; |
   &lt;a href=&quot;//github.com/linux4us&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;
  &lt;/p&gt;
 
