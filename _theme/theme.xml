@@ -398,13 +398,7 @@ h3.post-title, .comments h4 {
 .post-body img, .post-body .tr-caption-container, .Profile img, .Image img,
 .BlogList .item-thumbnail img {
   padding: $(image.border.small.size);
-
   background: $(image.background.color);
-  border: 1px solid $(image.border.color);
-
-  -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
-  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
 }
 
 .post-body .tr-caption-container {
@@ -413,21 +407,15 @@ h3.post-title, .comments h4 {
 
 .post-body .tr-caption-container img {
   padding: 0;
-
   background: transparent;
   border: none;
-
-  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, .1);
-  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .1);
-  box-shadow: 0 0 0 rgba(0, 0, 0, .1);
 }
 
 header {
   background-color: #06496b;
   margin: 0;
-  padding: 2rem 1rem 1rem 0;
+  padding: 3rem 1rem 1rem 0;
   border-bottom: 1px solid #ccc;
-  margin-top: 1rem;
   top: 0;
   border-bottom: 5px solid orange;
 }
@@ -440,7 +428,6 @@ header {
 .mobile .header-separator {
   display: none;
 }
-
 
 .post-header {
   margin: 0 0 1.5em;
@@ -606,7 +593,16 @@ body.mobile  {
 }
 
 body {
-    background-color: #ededed;
+  background-color: #ededed;
+}
+
+#navbg {
+  padding: 200px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, #06496b, #044760, #ededed);
 }
 
 h1 {
@@ -761,7 +757,6 @@ div.PopularPosts h2 {
 }
 
 #PopularPosts1, #PopularPosts2 {
-   border-bottom: 1px solid #dddddd;
    height: 500px
 }
 
@@ -804,6 +799,10 @@ div.PopularPosts h2 {
   padding: 0.2em 1.7em;
 }
 
+body.mobile {
+  padding-top: 50px;
+}
+
 .mobile header {
   display: block;
   z-index: 999;
@@ -812,12 +811,25 @@ div.PopularPosts h2 {
   border-bottom: 0;
 }
 
+.mobile #l4u-header {
+  background-color: #06496b;
+  margin: 0;
+  position: fixed;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
+}
+
 .mobile #l4u-header .alignright {
-  margin-top: 1em;
+  margin-top: .8em;
 }
 
 .mobile #l4u-header .alignleft a {
   font-size: 1rem;
+  padding: 0 .5em;
 }
 
 .mobile header .alignright {
@@ -826,7 +838,7 @@ div.PopularPosts h2 {
   text-align: inherit;
   color: white;
   background-color: #ededed;
-  padding: .4rem 0;
+  padding: .2rem .3em;
 }
 
 .mobile header .alignleft {
@@ -1135,9 +1147,19 @@ footer .widget{
     font-size: 1rem;
 }
 
+.sharethis-inline-share-buttons {
+  margin:2em 0;
+}
+
+td.tr-caption {
+  font-size: 70%;
+  font-style: italic;
+  font-family: Georgia, serif;
+}
+
 ]]></b:skin>
     <b:template-skin>
-      <b:variable default='960px' name='content.width' type='length' value='1020px'/>
+      <b:variable default='960px' name='content.width' type='length' value='1080px'/>
       <b:variable default='0' name='main.column.left.width' type='length' value='0px'/>
       <b:variable default='310px' name='main.column.right.width' type='length' value='280px'/>
 
@@ -1215,6 +1237,7 @@ footer .widget{
 
   </head>
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
+    <div id='navbg'/>
   <b:section class='navbar' id='navbar' maxwidgets='1' name='Navbar' showaddelement='no'>
     <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar' version='1'>
       <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
@@ -1322,7 +1345,7 @@ head.appendChild(script);
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;div id=&quot;l4u-header&quot;&gt;
  &lt;div class=&quot;alignleft&quot;&gt;
-  &lt;a href=&quot;/&quot; class=&quot;logo&quot;&gt;Linux4Us&lt;/a&gt;
+  &lt;a href=&quot;/&quot; class=&quot;logo&quot;&gt;Linux | 4Us&lt;/a&gt;
   &lt;div class=&quot;desc&quot;&gt;
 News, tutorials and tips about Linux
 &lt;/div&gt;
@@ -1371,25 +1394,7 @@ News, tutorials and tips about Linux
     <div class='fauxborder-right tabs-fauxborder-right'/>
     <div class='region-inner tabs-inner'>
       <b:section class='tabs' id='crosscol' maxwidgets='1' name='Cross-Column' showaddelement='yes'/>
-      <b:section class='tabs' id='crosscol-overflow' name='Cross-Column 2' showaddelement='no'>
-        <b:widget id='AdSense1' locked='false' title='' type='AdSense'>
-          <b:widget-settings>
-            <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
-            <b:widget-setting name='style.layout'>468x60</b:widget-setting>
-            <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
-            <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
-            <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
-  <div class='widget-content'>
-    <data:adCode/>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-        </b:widget>
-      </b:section>
+      <b:section class='tabs' id='crosscol-overflow' name='Cross-Column 2' showaddelement='no'/>
     </div>
     </div>
     <div class='tabs-cap-bottom cap-bottom'>
@@ -2339,26 +2344,9 @@ News, tutorials and tips about Linux
   </div>
 </b:includable>
             </b:widget>
-            <b:widget id='HTML4' locked='false' mobile='yes' title='' type='HTML'>
-              <b:widget-settings>
-                <b:widget-setting name='content'>&lt;h3&gt;Share&lt;/h3&gt;
-&lt;div class=&quot;sharethis-inline-share-buttons&quot;&gt;&lt;/div&gt;</b:widget-setting>
-              </b:widget-settings>
-              <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-            </b:widget>
             <b:widget id='HTML3' locked='false' mobile='yes' title='' type='HTML'>
               <b:widget-settings>
-                <b:widget-setting name='content'>&lt;div class=&quot;subheader my2&quot;&gt;Any comment about this page? Please &lt;a href=&quot;https://twitter.com/linux4us1&quot; target=&quot;_blank&quot;&gt;reach out on Twitter&lt;/a&gt;
+                <b:widget-setting name='content'>&lt;div class=&quot;subheader&quot;&gt;Any comment about this page? Please &lt;a href=&quot;https://twitter.com/linux4us1&quot; target=&quot;_blank&quot;&gt;reach out on Twitter&lt;/a&gt;
 &lt;/div&gt;</b:widget-setting>
               </b:widget-settings>
               <b:includable id='main'>
@@ -2373,21 +2361,20 @@ News, tutorials and tips about Linux
   <b:include name='quickedit'/>
 </b:includable>
             </b:widget>
-            <b:widget id='AdSense2' locked='false' title='' type='AdSense'>
+            <b:widget id='HTML4' locked='false' mobile='yes' title='' type='HTML'>
               <b:widget-settings>
-                <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-                <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
-                <b:widget-setting name='style.layout'>970x90</b:widget-setting>
-                <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-                <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
-                <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
-                <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+                <b:widget-setting name='content'><![CDATA[<div class="sharethis-inline-share-buttons"></div>]]></b:widget-setting>
               </b:widget-settings>
               <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
   <div class='widget-content'>
-    <data:adCode/>
-    <b:include name='quickedit'/>
+    <data:content/>
   </div>
+
+  <b:include name='quickedit'/>
 </b:includable>
             </b:widget>
             <b:widget id='FeaturedPost1' locked='false' mobile='yes' title='Featured Article' type='FeaturedPost'>
@@ -2667,10 +2654,10 @@ News, tutorials and tips about Linux
   </b:widget>
   <b:widget id='PopularPosts1' locked='false' title='Popular this Week' type='PopularPosts'>
     <b:widget-settings>
-      <b:widget-setting name='numItemsToShow'>10</b:widget-setting>
+      <b:widget-setting name='numItemsToShow'>3</b:widget-setting>
       <b:widget-setting name='showThumbnails'>true</b:widget-setting>
       <b:widget-setting name='showSnippets'>true</b:widget-setting>
-      <b:widget-setting name='timeRange'>LAST_WEEK</b:widget-setting>
+      <b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
@@ -2713,27 +2700,10 @@ News, tutorials and tips about Linux
   </div>
 </b:includable>
   </b:widget>
-  <b:widget id='AdSense3' locked='false' title='' type='AdSense'>
-    <b:widget-settings>
-      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-      <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
-      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-      <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
-      <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
-      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-    </b:widget-settings>
-    <b:includable id='main'>
-  <div class='widget-content'>
-    <data:adCode/>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-  </b:widget>
   <b:widget id='HTML2' locked='false' title='' type='HTML'>
     <b:widget-settings>
       <b:widget-setting name='content'>&lt;h4&gt;Recent Tweets&lt;/h4&gt;
-&lt;a class=&quot;twitter-timeline&quot; data-width=&quot;500&quot; data-height=&quot;300&quot; data-tweet-limit=&quot;3&quot; data-chrome=&quot;noheader nofooter noborders&quot; href=&quot;https://twitter.com/linux4us1?ref_src=twsrc%5Etfw&quot;&gt;&lt;/a&gt; &lt;script async=&quot;async&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot; &gt;&lt;/script&gt;</b:widget-setting>
+&lt;a class=&quot;twitter-timeline&quot; data-width=&quot;500&quot; data-height=&quot;300&quot; data-tweet-limit=&quot;7&quot; data-chrome=&quot;noheader nofooter noborders&quot; href=&quot;https://twitter.com/linux4us1?ref_src=twsrc%5Etfw&quot;&gt;&lt;/a&gt; &lt;script async=&quot;async&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot; &gt;&lt;/script&gt;</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2777,32 +2747,6 @@ News, tutorials and tips about Linux
     <b:include name='quickedit'/>
   </b:includable>
   </b:widget>
-  <b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail'>
-    <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'><h2 class='title'><data:title/></h2></b:if>
-  <div class='widget-content'>
-    <div class='follow-by-email-inner'>
-      <form action='https://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;https://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
-        <table width='100%'>
-          <tr>
-            <td>
-              <input class='follow-by-email-address' name='email' placeholder='Email address...' type='text'/>
-            </td>
-            <td width='64px'>
-              <input class='follow-by-email-submit' type='submit' value='Submit'/>
-            </td>
-          </tr>
-        </table>
-        <input expr:value='data:feedPath' name='uri' type='hidden'/>
-        <input name='loc' type='hidden' value='en_US'/>
-      </form>
-    </div>
-  </div>
-  <span class='item-control blog-admin'>
-    <b:include name='quickedit'/>
-  </span>
-</b:includable>
-  </b:widget>
 </b:section-contents><b:section-contents id='footer-1'>
   <b:widget id='HTML6' locked='false' mobile='yes' title='' type='HTML'>
     <b:widget-settings>
@@ -2831,8 +2775,9 @@ News, tutorials and tips about Linux
   &lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt; |
   &lt;a href=&quot;/p/about-us.html&quot;&gt;About Us&lt;/a&gt; |
   &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt; |
-  &lt;a href=&quot;//github.com/linux4us&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;
- &lt;/p&gt;
+  &lt;a href=&quot;//github.com/linux4us&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt; |
+  &lt;a href=&quot;//www.linux4us.com/feeds/posts/default&quot; target=&quot;_blank&quot;&gt;RSS
+ &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;
 Linux4Us | News, tutorials and tips about Linux
@@ -2840,6 +2785,7 @@ Linux4Us | News, tutorials and tips about Linux
 
  &lt;p&gt;2020 &#169; &lt;a href=&quot;//www.hildenco.com&quot; target=&quot;_blank&quot;&gt;HildenCo Software&lt;/a&gt;&lt;/p&gt;
 
+&lt;p&gt; Made with 🧡 in Canada&lt;/p&gt;
 
 &lt;/div&gt;</b:widget-setting>
     </b:widget-settings>
