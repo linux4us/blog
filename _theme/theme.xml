@@ -417,7 +417,7 @@ header {
   padding: 3rem 1rem 1rem 0;
   border-bottom: 1px solid #ccc;
   top: 0;
-  border-bottom: 5px solid orange;
+  border-bottom: 5px solid #f57c00;
 }
 
 .header-separator {
@@ -634,10 +634,6 @@ body .navbar{
   height:0px;
 }
 
-.post-body p {
-  margin-bottom: 2.2rem;
-}
-
 .post-body ul {
   list-style: unset !important;
 }
@@ -654,7 +650,7 @@ body .navbar{
 }
 
 .date-header span {
-  background-color: orange;
+  background-color: #f57c00;
 }
 
 #main { 
@@ -785,7 +781,7 @@ div.PopularPosts h2 {
 }
 
 #l4u-header .logo {
-  background-color: orange;
+  background-color: #f57c00;
   color: #white;
   display: inline-block;
   padding: 0 .8em 0 1em;
@@ -1139,12 +1135,12 @@ footer .widget{
 }
 
 #my-form-button {
-    background-color: white;
-    padding: .3rem 5rem;
-    border: 1px solid #2288bb;
-    color: #2288bb;
-    font-weight: 600;
-    font-size: 1rem;
+  background-color: white;
+  padding: .3rem 5rem;
+  border: 1px solid #2288bb;
+  color: #2288bb;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .sharethis-inline-share-buttons {
@@ -1155,6 +1151,14 @@ td.tr-caption {
   font-size: 70%;
   font-style: italic;
   font-family: Georgia, serif;
+}
+
+.rss {
+  background-color: #f57c00;
+  color: #white;
+  display: inline-block;
+  padding: 0 .8em;
+  margin-left: .8em;
 }
 
 ]]></b:skin>
@@ -1352,9 +1356,8 @@ News, tutorials and tips about Linux
 &lt;/div&gt;
 
  &lt;div class=&quot;alignright&quot;&gt;
-  &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; 
-  &lt;a href=&quot;/p/books.html&quot;&gt;Books&lt;/a&gt; 
-  &lt;a href=&quot;/p/courses.html&quot;&gt;Courses&lt;/a&gt; 
+  &lt;a href=&quot;/p/books.html&quot;&gt;Free Books&lt;/a&gt; 
+  &lt;a href=&quot;/p/courses.html&quot;&gt;Free Courses&lt;/a&gt; 
   &lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; 
   &lt;a href=&quot;/p/about-us.html&quot;&gt;About Us&lt;/a&gt; 
   &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt;
@@ -1393,7 +1396,25 @@ News, tutorials and tips about Linux
     <div class='fauxborder-left tabs-fauxborder-left'>
     <div class='fauxborder-right tabs-fauxborder-right'/>
     <div class='region-inner tabs-inner'>
-      <b:section class='tabs' id='crosscol' maxwidgets='1' name='Cross-Column' showaddelement='yes'/>
+      <b:section class='tabs' id='crosscol' maxwidgets='1' name='Cross-Column' showaddelement='yes'>
+        <b:widget id='AdSense1' locked='false' title='' type='AdSense'>
+          <b:widget-settings>
+            <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+            <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
+            <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+            <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+            <b:widget-setting name='style.urlcolor'>#666666</b:widget-setting>
+            <b:widget-setting name='style.linkcolor'>#2288bb</b:widget-setting>
+            <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+  <div class='widget-content'>
+    <data:adCode/>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+        </b:widget>
+      </b:section>
       <b:section class='tabs' id='crosscol-overflow' name='Cross-Column 2' showaddelement='no'/>
     </div>
     </div>
@@ -1491,7 +1512,7 @@ News, tutorials and tips about Linux
                 <b:widget-setting name='postsPerAd'>1</b:widget-setting>
                 <b:widget-setting name='showBacklinks'>false</b:widget-setting>
                 <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-                <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+                <b:widget-setting name='showInlineAds'>true</b:widget-setting>
                 <b:widget-setting name='showReactions'>false</b:widget-setting>
               </b:widget-settings>
               <b:includable id='main' var='top'>
@@ -2344,23 +2365,6 @@ News, tutorials and tips about Linux
   </div>
 </b:includable>
             </b:widget>
-            <b:widget id='HTML3' locked='false' mobile='yes' title='' type='HTML'>
-              <b:widget-settings>
-                <b:widget-setting name='content'>&lt;div class=&quot;subheader&quot;&gt;Any comment about this page? Please &lt;a href=&quot;https://twitter.com/linux4us1&quot; target=&quot;_blank&quot;&gt;reach out on Twitter&lt;/a&gt;
-&lt;/div&gt;</b:widget-setting>
-              </b:widget-settings>
-              <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-            </b:widget>
             <b:widget id='HTML4' locked='false' mobile='yes' title='' type='HTML'>
               <b:widget-settings>
                 <b:widget-setting name='content'><![CDATA[<div class="sharethis-inline-share-buttons"></div>]]></b:widget-setting>
@@ -2375,6 +2379,23 @@ News, tutorials and tips about Linux
   </div>
 
   <b:include name='quickedit'/>
+</b:includable>
+            </b:widget>
+            <b:widget id='AdSense3' locked='false' title='' type='AdSense'>
+              <b:widget-settings>
+                <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+                <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
+                <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+                <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+                <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
+                <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
+                <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main'>
+  <div class='widget-content'>
+    <data:adCode/>
+    <b:include name='quickedit'/>
+  </div>
 </b:includable>
             </b:widget>
             <b:widget id='FeaturedPost1' locked='false' mobile='yes' title='Featured Article' type='FeaturedPost'>
@@ -2559,6 +2580,32 @@ News, tutorials and tips about Linux
 </macro:includable>
 
 <b:section-contents id='sidebar-right-1'>
+  <b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail'>
+    <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'><h2 class='title'><data:title/></h2></b:if>
+  <div class='widget-content'>
+    <div class='follow-by-email-inner'>
+      <form action='https://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;https://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
+        <table width='100%'>
+          <tr>
+            <td>
+              <input class='follow-by-email-address' name='email' placeholder='Email address...' type='text'/>
+            </td>
+            <td width='64px'>
+              <input class='follow-by-email-submit' type='submit' value='Submit'/>
+            </td>
+          </tr>
+        </table>
+        <input expr:value='data:feedPath' name='uri' type='hidden'/>
+        <input name='loc' type='hidden' value='en_US'/>
+      </form>
+    </div>
+  </div>
+  <span class='item-control blog-admin'>
+    <b:include name='quickedit'/>
+  </span>
+</b:includable>
+  </b:widget>
   <b:widget id='BlogSearch1' locked='false' title='Search' type='BlogSearch'>
     <b:includable id='main'>
     <!-- only display title if it's non-empty -->
@@ -2606,6 +2653,23 @@ News, tutorials and tips about Linux
   <b:include name='quickedit'/>
 </b:includable>
   </b:widget>
+  <b:widget id='AdSense2' locked='false' title='' type='AdSense'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
+      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <div class='widget-content'>
+    <data:adCode/>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+  </b:widget>
   <b:widget id='Label1' locked='false' mobile='yes' title='Search by Topic' type='Label'>
     <b:widget-settings>
       <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
@@ -2648,6 +2712,23 @@ News, tutorials and tips about Linux
         </span>
       </b:loop>
     </b:if>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+  </b:widget>
+  <b:widget id='AdSense4' locked='false' title='' type='AdSense'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
+      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <div class='widget-content'>
+    <data:adCode/>
     <b:include name='quickedit'/>
   </div>
 </b:includable>
@@ -2700,10 +2781,27 @@ News, tutorials and tips about Linux
   </div>
 </b:includable>
   </b:widget>
+  <b:widget id='AdSense5' locked='false' title='' type='AdSense'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
+      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <div class='widget-content'>
+    <data:adCode/>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+  </b:widget>
   <b:widget id='HTML2' locked='false' title='' type='HTML'>
     <b:widget-settings>
       <b:widget-setting name='content'>&lt;h4&gt;Recent Tweets&lt;/h4&gt;
-&lt;a class=&quot;twitter-timeline&quot; data-width=&quot;500&quot; data-height=&quot;300&quot; data-tweet-limit=&quot;7&quot; data-chrome=&quot;noheader nofooter noborders&quot; href=&quot;https://twitter.com/linux4us1?ref_src=twsrc%5Etfw&quot;&gt;&lt;/a&gt; &lt;script async=&quot;async&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot; &gt;&lt;/script&gt;</b:widget-setting>
+&lt;a class=&quot;twitter-timeline&quot; data-width=&quot;500&quot; data-height=&quot;300&quot; data-tweet-limit=&quot;3&quot; data-chrome=&quot;noheader nofooter noborders&quot; href=&quot;https://twitter.com/linux4us1?ref_src=twsrc%5Etfw&quot;&gt;&lt;/a&gt; &lt;script async=&quot;async&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot; &gt;&lt;/script&gt;</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2715,6 +2813,23 @@ News, tutorials and tips about Linux
   </div>
 
   <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+  <b:widget id='AdSense6' locked='false' title='' type='AdSense'>
+    <b:widget-settings>
+      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
+      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+      <b:widget-setting name='style.urlcolor'>#2288bb</b:widget-setting>
+      <b:widget-setting name='style.linkcolor'>#222222</b:widget-setting>
+      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <div class='widget-content'>
+    <data:adCode/>
+    <b:include name='quickedit'/>
+  </div>
 </b:includable>
   </b:widget>
   <b:widget id='BlogSearch2' locked='false' title='Search' type='BlogSearch'>
@@ -2750,7 +2865,7 @@ News, tutorials and tips about Linux
 </b:section-contents><b:section-contents id='footer-1'>
   <b:widget id='HTML6' locked='false' mobile='yes' title='' type='HTML'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[Is this website helpful to you? Please consider disabling your ad blocker, sharing posts and <a href="https://twitter.com/linux4us1" target="_blank">sending your feedback</a>. Thanks!]]></b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[Is this website helpful to you? Please consider subscribing, sharing posts and <a href="https://twitter.com/linux4us1" target="_blank">sending your feedback</a>.]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2776,7 +2891,7 @@ News, tutorials and tips about Linux
   &lt;a href=&quot;/p/about-us.html&quot;&gt;About Us&lt;/a&gt; |
   &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt; |
   &lt;a href=&quot;//github.com/linux4us&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt; |
-  &lt;a href=&quot;//www.linux4us.com/feeds/posts/default&quot; target=&quot;_blank&quot;&gt;RSS
+  &lt;a href=&quot;//www.linux4us.com/feeds/posts/default&quot; target=&quot;_blank&quot; class=&quot;rss&quot;&gt;RSS
  &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;
@@ -2785,7 +2900,7 @@ Linux4Us | News, tutorials and tips about Linux
 
  &lt;p&gt;2020 &#169; &lt;a href=&quot;//www.hildenco.com&quot; target=&quot;_blank&quot;&gt;HildenCo Software&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt; Made with 🧡 in Canada&lt;/p&gt;
+&lt;p&gt; Made with &#9829; in Canada&lt;/p&gt;
 
 &lt;/div&gt;</b:widget-setting>
     </b:widget-settings>
