@@ -41,3 +41,11 @@ https://www.linux4us.com/2020/10/why-linux-is-safer-than-windows-and.html
 New #Linux users often encounter the expression "Distribution" (or distro). Learn what that means. 
 #foss #opensource
 https://www.linux4us.com/2020/10/what-is-linux-distribution-aka-distro.html
+
+You probably heard the term "Enterprise Linux" before. But do you understand what it means?
+#linux #foss #opensource
+https://www.linux4us.com/2020/11/what-is-enterprise-linux.html
+
+Learn why #Linux is perfect for #education
+#foss #opensource
+https://www.linux4us.com/2020/11/why-linux-is-perfect-for-education.html
